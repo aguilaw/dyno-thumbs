@@ -254,7 +254,7 @@ function resizeableImage(image_target,width,height) {
       resize_canvas.width = width;
       resize_canvas.height = height;
       resize_canvas.getContext('2d').drawImage(orig_src, 0, 0, width, height);
-      image_target.attr('src', resize_canvas.toDataURL("image/png"));
+      image_target.attr('src', resize_canvas.toDataURL("image/jpeg"));
       $container.attr('style','');
     }.bind(this);
 
@@ -275,7 +275,7 @@ function resizeableImage(image_target,width,height) {
       var link= document.createElement('a');
       link.addEventListener('click', function(ev) {
         link.href = crop_canvas.toDataURL();
-        link.download = "thumb.png";
+        link.download = "thumb.jpg";
       }, false);
 
       link.click();
